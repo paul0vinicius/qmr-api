@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 2018_05_22_235541) do
     t.string "title"
     t.string "description"
     t.string "category"
-    t.string "key_words"
+    t.text "keywords"
+    t.text "votings"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
