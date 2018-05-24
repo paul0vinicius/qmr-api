@@ -1,24 +1,3 @@
-# README
+# QMR API RESTful
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A ideia por trás do projeto é criar uma plataforma onde candidatos a deputado federal possam responder a um conjunto pré-definidos de perguntas podendo identificar seu posicionamento diante de temas polêmicos ou que estão em alta.
