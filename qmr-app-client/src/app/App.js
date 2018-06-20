@@ -8,8 +8,12 @@ import {
 
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
+
 import Signup from '../user/signup/Signup';
 import Login from '../user/login/Login';
+import HomeContainer from '../home/HomeContainer';
+import AppHeader from '../common/AppHeader';
+
 import LoadingIndicator from '../common/LoadingIndicator';
 
 import { Layout, notification } from 'antd';
@@ -74,10 +78,10 @@ class App extends Component {
 
   handleLogin() {
     notification.success({
-      message: 'Polling App',
-      description: "You're successfully logged in.",
+      message: 'Quem Me Representa? - Seção de Candidatos',
+      description: "Você logou com sucesso! Que tal responder as perguntas agora?",
     });
-    //this.loadCurrentUser();
+    this.loadCurrentUser();
     this.props.history.push("/");
   }
 
@@ -87,17 +91,15 @@ class App extends Component {
     }
     return (
         <Layout className="app-container">
-          {/*<AppHeader isAuthenticated={this.state.isAuthenticated} 
-            currentUser={this.state.currentUser} 
-    onLogout={this.handleLogout} />*/}
+          <AppHeader isAuthenticated={this.state.isAuthenticated} 
+                      currentUser={this.state.currentUser} 
+                      onLogout={this.handleLogout} 
+          />
 
           <Content className="app-content">
             <div className="container">
               <Switch>
-              <Route exact path="/">
-                  autenticado: {this.state.isAuthenticated} 
-                  {this.state.currentUser}
-                </Route>
+              <Route exact path="/" component={HomeContainer}></Route>
                 <Route path="/login" 
                   render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>      
                 <Route path="/signup" component={Signup}></Route>
