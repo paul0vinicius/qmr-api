@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'https://qmr-api-server.herokuapp.com/api';
+export const API_BASE_URL = 'https://qmr-api-server.herokuapp.com/';
 //export const API_BASE_URL = '/api';
 export const ACCESS_TOKEN = 'accessToken';
 
